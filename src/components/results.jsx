@@ -10,37 +10,10 @@ function Results(props) {
 
   return (
     <div className="SignUpBox-Container">
-      <p className="SignUpBox-WelcomeMsg">Should We Gather?</p>
-      <div className="SignUpBox-InputTable">
-        <div className="SignUpBox-InputRow">
-          <label className="SignUpBox-InputCell">Your ZIP code: </label>
-          <input
-            onChange={(e) => setZipcode(e.target.value)}
-            className="SignUpBox-InputCell"
-            id="signUpBox-EmailInput"
-            type="number"
-            value={zipcode}
-          />
-        </div>
-        <div className="SignUpBox-InputRow">
-          <label className="SignUpBox-InputCell">Size of Gathering: </label>
-          <input
-            onChange={(e) => setN(e.target.value)}
-            className="SignUpBox-InputCell"
-            id="signUpBox-PasswordInput"
-            type="number"
-            value={n}
-          ></input>
-        </div>
-      </div>
-      <div className="SignUpBox-InputRow">
-        <button
-          className="SignUpBox-SignUpButton"
-          onClick={() => computeClick()}
-        >
-          GO
-        </button>
-      </div>
+      <p className="SignUpBox-WelcomeMsg">
+        The probability that at least one person in your gathering of {n} has
+        COVID-19 is {prob}.
+      </p>
     </div>
   );
 }

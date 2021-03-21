@@ -1,6 +1,6 @@
 .SignUpBox-Container {
   width: 50%;
-  height: 400px;
+  height: 600px;
   position: relative;
   background-color: #c0c0c0;
 
@@ -20,10 +20,19 @@
 
 .SignUpBox-WelcomeMsg {
   font-family: MisterPixel;
-  font-size: 20pt;
+  font-size: 36pt;
   font-style: oblique;
   font-weight: bold;
   text-align: center;
+}
+
+.SignUpBox-Msg {
+  font-family: MisterPixel;
+  font-size: 24pt;
+  font-style: oblique;
+  font-weight: bold;
+  text-align: center;
+  color: #0047ff;
 }
 
 .SignUpBox-InputTable {
@@ -31,6 +40,8 @@
 }
 
 .SignUpBox-InputRow {
+  font-family: MisterPixel;
+
   display: table-row;
   margin: 5px 0 5px 0;
 }
@@ -48,7 +59,7 @@
   color: white;
   margin: 5px 0 8px 0;
   height: 36px;
-  width: 84px;
+  width: 420px;
 }
 
 .SignUpBox-SignUpButton:hover {

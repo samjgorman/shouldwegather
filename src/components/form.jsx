@@ -7,18 +7,21 @@ function Form(props) {
   const [zipcode, setZipcode] = useState("");
   const [n, setN] = useState("");
   const [prob, setProb] = useState("");
+  const [results, setResults] = useState(False);
 
   const computeClick = (e) => {
     // e.preventDefault();
 
     const url =
-      "https://us-central1-useful-lattice-308300.cloudfunctions.net/function-2";
+      "https://us-central1-useful-lattice-308300.cloudfunctions.net/function-3";
     axios
       .post(url, {
         zipcode: { zipcode },
         n: { n },
       })
-      .then((response) => setProb(response.data.id));
+      .then((response) => setProb(response.data.id))
+      .then((response) => setResults(True));
+
     // .catch((error)=>{
     //     console.log(error);
     //     //   this.setState({onError: true});
@@ -27,8 +30,15 @@ function Form(props) {
   };
 
   return (
+    <div> {results  ? <div>Yay!</div> : <div>Not yet</div>} </div>
     <div className="SignUpBox-Container">
-      <p className="SignUpBox-WelcomeMsg">Should We Gather?</p>
+      <p className="SignUpBox-WelcomeMsg">ShouldWeGather?</p>
+      <p className="SignUpBox-Msg">"what’s up friend, tryna gather tonight?"</p>
+      <p className="SignUpBox-Msg">
+        "naw man, there’s a 66.7% chance that one of us has COVID if we gather
+        in this group of 17 in the zipcode of 91502."
+      </p>
+
       <div className="SignUpBox-InputTable">
         <div className="SignUpBox-InputRow">
           <label className="SignUpBox-InputCell">Your ZIP code: </label>
