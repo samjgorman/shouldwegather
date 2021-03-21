@@ -14,13 +14,13 @@ function Form(props) {
     // e.preventDefault();
 
     const url =
-      "https://us-central1-useful-lattice-308300.cloudfunctions.net/function-14";
+      "https://dry-refuge-85587.herokuapp.com/https://us-central1-useful-lattice-308300.cloudfunctions.net/function-14";
     axios
       .post(url, {
         zipcode: { zipcode },
         n: { n },
       })
-      .then((response) => setProb(response.data.id))
+      .then((response) => setProb(response.data.groupInfected))
       .then((response) => setResults(true));
 
     // .catch((error)=>{
@@ -32,7 +32,14 @@ function Form(props) {
 
   return (
     <div className="SignUpBox-Container">
-      <div> {results ? <Results></Results> : <div>Not yet</div>} </div>
+      <div>
+        {" "}
+        {results ? (
+          <Results props={(prob, n, zipcode)}></Results>
+        ) : (
+          <div>Not yet</div>
+        )}{" "}
+      </div>
 
       <p className="SignUpBox-WelcomeMsg">ShouldWeGather?</p>
       <p className="SignUpBox-Msg">"what’s up friend, tryna gather tonight?"</p>
