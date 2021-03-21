@@ -15,12 +15,12 @@ function Form(props) {
 
     const url = `https://dry-refuge-85587.herokuapp.com/https://us-central1-useful-lattice-308300.cloudfunctions.net/function-14?n=${n}&zipcode=${zipcode}`;
     axios
-      .post(url, {
-        // zipcode: { zipcode },
-        // n: { n },
-      })
-      .then((response) => setProb(response.data.groupInfected))
-      .then((response) => setResults(true));
+      .post(url, {})
+      .then((response) => setProb(response.data.groupInfected)),
+      (error) => {
+        console.log(error);
+      };
+    //   .then((response) => setResults(true));
 
     // .catch((error)=>{
     //     console.log(error);
