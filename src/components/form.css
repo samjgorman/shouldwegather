@@ -56,14 +56,15 @@
   /* background-color: #ff00b8; */
   background: linear-gradient(180deg, #ffa700 0%, #ebff00 100%);
   border: none;
-  color: white;
+  color: #0047ff;
   margin: 5px 0 8px 0;
   height: 36px;
   width: 420px;
 }
 
 .SignUpBox-SignUpButton:hover {
-  color: white;
-  opacity: 75%;
+  /* color: white; */
+  color: #0047ff;
   cursor: pointer;
+  border: 5px dashed #0047ff;
 }

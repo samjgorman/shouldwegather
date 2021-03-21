@@ -13,6 +13,7 @@
   border-bottom: 5px dashed #0047ff;
   border-left: 5px dashed #0047ff;
   border-right: 5px dashed #0047ff;
+  padding: 36px;
   display: flex;
   flex-direction: column;
   justify-content: center;
