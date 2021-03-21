@@ -1,0 +1,58 @@
+.SignUpBox-Container {
+  width: 50%;
+  height: 400px;
+  position: relative;
+  background-color: #c0c0c0;
+
+  /* background-color: transparent; */
+  align-items: center;
+
+  margin: auto;
+  color: white;
+  border-bottom: 5px dashed #0047ff;
+  border-left: 5px dashed #0047ff;
+  border-right: 5px dashed #0047ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.SignUpBox-WelcomeMsg {
+  font-family: MisterPixel;
+  font-size: 20pt;
+  font-style: oblique;
+  font-weight: bold;
+  text-align: center;
+}
+
+.SignUpBox-InputTable {
+  display: table;
+}
+
+.SignUpBox-InputRow {
+  display: table-row;
+  margin: 5px 0 5px 0;
+}
+
+.SignUpBox-InputCell {
+  display: table-cell;
+}
+
+.SignUpBox-SignUpButton {
+  font-family: MisterPixel;
+  display: inline-block;
+  /* background-color: #ff00b8; */
+  background: linear-gradient(180deg, #ffa700 0%, #ebff00 100%);
+  border: none;
+  color: white;
+  margin: 5px 0 8px 0;
+  height: 36px;
+  width: 84px;
+}
+
+.SignUpBox-SignUpButton:hover {
+  color: white;
+  opacity: 75%;
+  cursor: pointer;
+}
