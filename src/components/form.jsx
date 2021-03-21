@@ -12,7 +12,7 @@ function Form(props) {
 
   const computeClick = (e) => {
     // e.preventDefault();
-    const url = `https://us-central1-useful-lattice-308300.cloudfunctions.net/function-14?n=${n}&zipcode=${zipcode}`;
+    const url = `https://us-central1-useful-lattice-308300.cloudfunctions.net/function-15?n=${n}&zipcode=${zipcode}`;
     axios
       .post(url, {})
 
