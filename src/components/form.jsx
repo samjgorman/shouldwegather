@@ -2,25 +2,26 @@ import React, { useState, useContext } from "react";
 import axios from "axios";
 
 import "./form.css";
+import Results from "./results.jsx";
 
 function Form(props) {
   const [zipcode, setZipcode] = useState("");
   const [n, setN] = useState("");
   const [prob, setProb] = useState("");
-  const [results, setResults] = useState(False);
+  const [results, setResults] = useState(false);
 
   const computeClick = (e) => {
     // e.preventDefault();
 
     const url =
-      "https://us-central1-useful-lattice-308300.cloudfunctions.net/function-3";
+      "https://us-central1-useful-lattice-308300.cloudfunctions.net/function-14";
     axios
       .post(url, {
         zipcode: { zipcode },
         n: { n },
       })
       .then((response) => setProb(response.data.id))
-      .then((response) => setResults(True));
+      .then((response) => setResults(true));
 
     // .catch((error)=>{
     //     console.log(error);
@@ -30,8 +31,9 @@ function Form(props) {
   };
 
   return (
-    <div> {results  ? <div>Yay!</div> : <div>Not yet</div>} </div>
     <div className="SignUpBox-Container">
+      <div> {results ? <Results></Results> : <div>Not yet</div>} </div>
+
       <p className="SignUpBox-WelcomeMsg">ShouldWeGather?</p>
       <p className="SignUpBox-Msg">"what’s up friend, tryna gather tonight?"</p>
       <p className="SignUpBox-Msg">

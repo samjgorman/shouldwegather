@@ -9,8 +9,8 @@ function Results(props) {
   const [prob, setProb] = useState("");
 
   return (
-    <div className="SignUpBox-Container">
-      <p className="SignUpBox-WelcomeMsg">
+    <div className="ResultsBox-Container">
+      <p className="ResultsBox-WelcomeMsg">
         The probability that at least one person in your gathering of {n} has
         COVID-19 is {prob}.
       </p>
@@ -18,4 +18,4 @@ function Results(props) {
   );
 }
 
-export default Form;
+export default Results;
