@@ -12,14 +12,13 @@ function Form(props) {
 
   const computeClick = (e) => {
     // e.preventDefault();
-
     const url = `https://us-central1-useful-lattice-308300.cloudfunctions.net/function-14?n=${n}&zipcode=${zipcode}`;
     axios
       .post(url, {})
-      .then((response) => setProb(response.data.groupInfected)),
-      (error) => {
-        console.log(error);
-      };
+      .then((response) => setProb(response.data.groupInfected));
+    //   (error) => {
+    //     console.log(error);
+    //   };
     //   .then((response) => setResults(true));
 
     // .catch((error)=>{
@@ -32,12 +31,11 @@ function Form(props) {
   return (
     <div className="SignUpBox-Container">
       <div>
-        {" "}
         {results ? (
           <Results props={(prob, n, zipcode)}></Results>
         ) : (
           <div>Not yet</div>
-        )}{" "}
+        )}
       </div>
 
       <p className="SignUpBox-WelcomeMsg">ShouldWeGather?</p>
