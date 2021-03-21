@@ -10,6 +10,8 @@ function Results(props) {
 
   return (
     <div className="ResultsBox-Container">
+      <div className="ResultsBox-Prob">{props.prob}</div>
+
       <p className="ResultsBox-WelcomeMsg">
         The probability that at least one person in your gathering of {props.n}{" "}
         has COVID-19 is {props.prob}.
