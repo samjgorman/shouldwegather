@@ -1,4 +1,29 @@
 .ResultsBox-Container {
+  font-family: MisterPixel;
+  width: 50%;
+  height: 600px;
+  position: relative;
+  background-color: #c0c0c0;
+
+  /* background-color: transparent; */
+  align-items: center;
+
+  margin: auto;
+  color: white;
+  border-bottom: 5px dashed #0047ff;
+  border-left: 5px dashed #0047ff;
+  border-right: 5px dashed #0047ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
 }
 .ResultsBox-WelcomeMsg {
+  font-family: MisterPixel;
+  color: #0047ff;
+}
+
+.ResultsBox-Prob {
+  font-size: 48px;
+  font-family: MisterPixel;
 }

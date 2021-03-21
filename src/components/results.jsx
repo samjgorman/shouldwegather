@@ -18,7 +18,10 @@ function Results(props) {
       </p>
 
       <div className="ResultsBox-Text">So yeah, don't do this. </div>
-      <div className="ResultsBox-Text">Even if the number may seem small </div>
+      <div className="ResultsBox-Text">
+        Even if the number may seem small, the consequences are huge! And
+        numbers update each day.{" "}
+      </div>
     </div>
   );
 }
